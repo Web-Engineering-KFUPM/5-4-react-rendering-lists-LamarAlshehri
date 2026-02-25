@@ -14,9 +14,10 @@ export const sampleCourses = [
   },
   {
     id: "ICS-500",
-    title: "Research Methodology",
+    title: "Software testing",
     tasks: [
       { id: "t3", title: "Make Presentation",    dueDate: "2025-10-06", isDone: false },
+      {id: "t4",title: "Study lecture notes",isDone: false,dueDate: "2026-03-01"},
     ],
   },
 ];
