@@ -35,7 +35,10 @@ export default function CourseCard({ course, index, onMutateCourse }) {
       <section className="tasksSection">
 
         {/* DISPLAY ONLY: Show a message when there are no tasks */}
-        
+        {course.tasks.length > 0 &&
+          course.tasks.every(task => task.isDone) && (
+            <span className="badge">All caught up</span>
+          )}
         <ul className="tasks">
           {course.tasks.map((task) => (
             <TaskItem
@@ -46,6 +49,7 @@ export default function CourseCard({ course, index, onMutateCourse }) {
             />
           ))}
         </ul>
+        {course.tasks.length === 0 && <p>No tasks yet.</p>}
       </section>
     </article>
   );
